@@ -37,19 +37,20 @@ const Editor = () => {
             }}
             className="w-[600px] h-[842px] font-ubantu"
           >
-            {(() => {
-              switch (router.query?.id) {
-                case "e0e9e00f-34e3-4e20-ad3a-135963e38ad6":
-                  return (
-                    <Template_01
-                      setisHeaderEditModalOpen={setisHeaderEditModalOpen}
-                      isHeaderEditModalOpen={isHeaderEditModalOpen}
-                    />
-                  );
-                default:
-                  return <Blank />;
-              }
-            })()}
+            {router.query.id &&
+              (() => {
+                switch (router.query?.id) {
+                  case "e0e9e00f-34e3-4e20-ad3a-135963e38ad6":
+                    return (
+                      <Template_01
+                        setisHeaderEditModalOpen={setisHeaderEditModalOpen}
+                        isHeaderEditModalOpen={isHeaderEditModalOpen}
+                      />
+                    );
+                  default:
+                    return <Blank />;
+                }
+              })()}
           </div>
         </PDFExport>
       </main>

@@ -89,7 +89,9 @@ const Header_Main = ({ setisHeaderEditModalOpen }: Edit_Header_Modal_Type) => {
 
             {(Data?.Country || Data?.City || Data?.Area) && (
               <Contact_Item
-                Title={`${Data.Area}, ${Data.City}, ${Data.Country}`}
+                Title={`${Data.Area}${Data.Area && ","} ${Data.City}, ${
+                  Data.Country
+                }`}
                 Icon={MdLocationPin}
               />
             )}
