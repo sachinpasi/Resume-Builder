@@ -1,6 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/editor",
+        destination: "/templates",
+        permanent: false,
+      },
+    ];
+  },
+};
